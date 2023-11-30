@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> | Autóbérlés</title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+  <meta name="keywords"
+    content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+  <meta name="author" content="Createx Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" color="#6366f1" href="assets/favicon/safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="white">
+  <!-- Theme mode-->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+      root = document.getElementsByTagName('html')[0];
+    if (mode !== undefined && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+
+
+  </script>
+  <!-- Page loading styles-->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .dark-mode .page-loading {
+      background-color: #121519;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #6f788b;
+    }
+
+    .dark-mode .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      background-color: #d7dde2;
+      border-radius: 50%;
+      opacity: 0;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    .dark-mode .page-spinner {
+      background-color: rgba(255, 255, 255, .25);
+    }
+
+    @-webkit-keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      #businessman {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      #relationshipSection {
+        text-align: center;
+      }
+    }
+  </style>
+  <!-- Page loading scripts-->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1500);
+      };
+    })();
+
+  </script>
+  <!-- Import Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+  <!-- Vendor styles-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Customizer generated styles-->
+  <style id="customizer-styles"></style>
+  <!-- Google Tag Manager-->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+  </script>
+</head>
+<!-- Body-->
+
+<body>
+  <!-- Google Tag Manager (noscript)-->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+      style="display: none; visibility: hidden;"></iframe>
+  </noscript>
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Oldal betöltése...</span>
+    </div>
+  </div>
+
+
+
+  <!-- Page wrapper-->
+  <main class="page-wrapper">
+    <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+    <header class="navbar navbar-expand-lg fixed-top navbar-ignore-dark-mode ignore-dark-mode"
+      style="padding-top: 3px; padding-bottom: 3px;">
+      <div class="container"><a class="navbar-brand pe-sm-3" href="index.html" style=" margin-right: 0px;"><img
+            src="/assets/img/logo3.png" alt="logo" style="width: 60px;"><span class="text-primary flex-shrink-0 me-2">
+
+          </span>Autóbérlés</a>
+        <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+          <input class="form-check-input" type="checkbox" id="theme-mode" style="background-color: #3a82ff;">
+          <label class="form-check-label" for="theme-mode"><i class="ai-sun fs-lg"></i></label>
+          <label class="form-check-label" for="theme-mode"><i class="ai-moon fs-lg"></i></label>
+        </div>
+        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+            class="navbar-toggler-icon"></span></button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+            <li class="nav-item"><a class="nav-link" href="#introduction">Bemutatkozás</a>
+            <li class="nav-item"><a class="nav-link" href="/cars.html">Autóink</a></li>
+            <li class="nav-item"><a class="nav-link" href="#relationship">Kapcsolat</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Page content-->
+
+    <!-- Hero with contact form-->
+    <section class="pt-5">
+      <div class="container position-relative zindex-2 pt-5 mt-3 mt-sm-4 mt-md-5">
+        <div class="row pt-xl-3 pt-xxl-4">
+          <div class="col-lg-7 col-xxl-6">
+            <h1 class="display-3 text-center text-lg-start">Bérelhető gépjárművek széles választékban</h1>
+          </div>
+          <div class="col-lg-5 offset-xxl-1 pt-sm-3">
+            <p class="fs-lg text-center text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5">
+              Autóbérlés és kölcsönzés rendkívül kedvező feltételek mellett, nyugat-európai színvonalon, rövid és
+              hosszútávra
+            </p>
+            <!-- Contact form-->
+
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Parallax image-->
+      <div class="jarallax" data-jarallax="" data-speed="0.6">
+        <div class="jarallax-img" style="background-image: url(assets/img/index/01.jpg);"></div>
+        <div class="d-none d-xxl-block" style="height: 830px; margin-top: -470px;"></div>
+        <div class="d-none d-xl-block d-xxl-none" style="height: 780px; margin-top: -490px;"></div>
+        <div class="d-none d-lg-block d-xl-none" style="height: 700px; margin-top: -560px;"></div>
+        <div class="d-none d-sm-block d-lg-none" style="height: 520px; margin-top: -450px;"></div>
+        <div class="d-sm-none" style="height: 500px; margin-top: -450px;"></div>
+      </div>
+    </section>
+
+
+    <!-- Target audience-->
+    <div style="margin-bottom: 30px;" id="introduction"></div>
+
+    <section class="container pt-5 mt-xl-3 mt-xxl-5">
+      <div class="row pt-1 pt-sm-3 pt-md-4 pt-lg-5 mt-xl-2">
+        <div class="col-lg-4">
+          <h2 class="h1 pb-1 pb-sm-2 mb-4">Bemutatkozás</h2>
+          <img id="businessman" style=" margin-top: 0px; min-width: 450px; position: relative; right: 40px;
+
+          " src="assets/img/index/businessman.png" alt="businessman">
+        </div>
+        <div class="col-lg-8 col-xl-7 offset-xl-1">
+          <div class="ps-lg-4 ps-xl-0">
+            <div data-simplebar="">
+
+            </div>
+            <div class="tab-content py-2 pb-md-0 pt-sm-3 pt-lg-4 mb-4 mb-md-5">
+              <div class="tab-pane fade show active" id="designers" role="tabpanel">
+                <p class="fs-xl mb-4">
+                  Üdvözöljük Önöket a [Vállalkozás Neve] autókölcsönző weboldalán!
+
+                  Cégünk elkötelezett abban, hogy kivételes és rugalmas autóbérlési szolgáltatásokat nyújtson
+                  ügyfeleinek. Legyen szó üzleti útról, családi kirándulásról vagy csak egy rövid hétvégi
+                  kikapcsolódásról, nálunk mindenki megtalálhatja az ideális járművet az igényei szerint.
+
+                  Miért érdemes minket választani?
+
+                  Széles Választék: Kínálatunkban megtalálhatók a legmodernebb személyautóktól kezdve a tágas családi
+                  autókon át egészen a luxus kategóriás járművekig. Kiemelt figyelmet fordítunk a flottánk folyamatos
+                  frissítésére, hogy ügyfeleink mindig a legújabb és legbiztonságosabb autókat bérelhessék.
+
+                  Rugalmas Bérlési Időszakok: Nem kötjük hosszú távú szerződésekhez ügyfeleinket. Nálunk akár néhány
+                  órás, napokra szóló vagy hosszabb távú bérlés is lehetséges. Rugalmas feltételeinknek köszönhetően
+                  mindenki megtalálja a számára ideális megoldást.
+
+                  Kedvező Árak: Célunk, hogy versenyképes árakkal kínáljunk kiváló minőségű szolgáltatásokat. Áraink
+                  tükrözik az autók állapotát, a bérlési időtartamot és a kiválasztott járműkategóriát.
+
+                  Online Foglalás: Kényelmes online foglalási rendszerünk segítségével pár kattintással lefoglalhatja a
+                  kívánt autót. Bármikor, bárhol elérhetőek vagyunk, hogy könnyűvé tegyük az autóbérlés folyamatát.
+
+                  Ügyfélorientált Szemlélet: Ügyfeleink elégedettsége a legfontosabb számunkra. Tapasztalt és segítőkész
+                  csapatunk mindig rendelkezésre áll, hogy segítsen az Ön autóbérléssel kapcsolatos kérdéseiben és
+                  kéréseiben.
+
+                  Fedezze fel a szabadság és kényelem élményét egy kiváló minőségű autóval a [Vállalkozás Neve]
+                  autókölcsönzőnél. Béreljen velünk, és tegye felejthetetlenné utazásait!
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category-->
+    <section class="container pt-2 pt-sm-3 pb-5 mb-md-3 mb-lg-4 mb-xl-5">
+      <div class="d-flex align-items-center pb-3 mb-3 mb-lg-4">
+        <h2 class="h1 mb-0">Kategória szerint</h2>
+        <div class="d-flex ms-auto">
+          <button class="btn btn-sm btn-icon btn-outline-primary rounded-circle ms-3" type="button" id="prev-popular"><i
+              class="ai-arrow-left"></i></button>
+          <button class="btn btn-sm btn-icon btn-outline-primary rounded-circle ms-3" type="button" id="next-popular"><i
+              class="ai-arrow-right"></i></button>
+        </div>
+      </div>
+
+
+   
+
+      <!-- Swiper slider-->
+      <div class="container-start">
+        <div class="swiper" data-swiper-options="{
+            &quot;slidesPerView&quot;: 1,
+            &quot;spaceBetween&quot;: 24,
+            &quot;loop&quot;: true,
+            &quot;navigation&quot;: {
+              &quot;prevEl&quot;: &quot;#prev-popular&quot;,
+              &quot;nextEl&quot;: &quot;#next-popular&quot;
+            },
+            &quot;breakpoints&quot;: {
+              &quot;576&quot;: {
+                &quot;slidesPerView&quot;: &quot;auto&quot;
+              }
+            }
+          }">
+          <div class="swiper-wrapper">
+            <!-- Item-->
+            <article class="swiper-slide w-sm-auto h-auto">
+              <div class="card h-100 border-0 mx-auto" style="max-width: 416px;"><a href="cars.html?runScriptSmall=true"><img
+                    class="card-img-top" src="assets/img/category/01.png" alt="Post image"></a>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center mb-4 mt-n1"><span class="fs-sm text-muted"></span><span
+                      class="fs-xs opacity-20 mx-3"></span><a class="badge text-nav fs-xs border" href="#"></a></div>
+                  <h3 class="h4 card-title"><a href="cars.html?runScriptSmall=true">Kiskategóriás személyautók</a></h3>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer pt-3">
+                  <h6 class="ps-3 mb-0">6 000 Ft-tól</h6></a>
+                </div>
+              </div>
+            </article>
+
+
+      
+            <!-- Item-->
+            <article class="swiper-slide w-sm-auto h-auto">
+              <div class="card h-100 border-0 mx-auto" style="max-width: 416px;"><a href="cars.html?runScriptLux=true"><img
+                    class="card-img-top" src="assets/img/category/02.png" alt="Post image"></a>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center mb-4 mt-n1"><span class="fs-sm text-muted"></span><span
+                      class="fs-xs opacity-20 mx-3"></span><a class="badge text-nav fs-xs border" href="#"></a></div>
+                  <h3 class="h4 card-title"><a href="cars.html?runScriptLux=true">Luxusautók</a></h3>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer pt-3">
+                  <h6 class="ps-3 mb-0">10 000 Ft-tól</h6></a>
+                </div>
+              </div>
+            </article>
+            <!-- Item-->
+            <article class="swiper-slide w-sm-auto h-auto">
+              <div class="card h-100 border-0 mx-auto" style="max-width: 416px;"><a href="cars.html?runScriptBus=true"><img
+                    class="card-img-top" src="assets/img/category/03.png" alt="Post image"></a>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center mb-4 mt-n1"><span class="fs-sm text-muted"></span><span
+                      class="fs-xs opacity-20 mx-3"></span><a class="badge text-nav fs-xs border" href="#"></a></div>
+                  <h3 class="h4 card-title"><a href="cars.html?runScriptBus=true">9 személyes buszok</a></h3>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer pt-3">
+                  <h6 class="ps-3 mb-0">9 000 Ft-tól</h6></a>
+                </div>
+              </div>
+            </article>
+            <!-- Item-->
+            <article class="swiper-slide w-sm-auto h-auto">
+              <div class="card h-100 border-0 mx-auto" style="max-width: 416px;"><a href="cars.html?runScriptWork=true"><img
+                    class="card-img-top" src="assets/img/category/04.png" alt="Post image"></a>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center mb-4 mt-n1"><span class="fs-sm text-muted"></span><span
+                      class="fs-xs opacity-20 mx-3"></span><a class="badge text-nav fs-xs border" href="#"></a></div>
+                  <h3 class="h4 card-title"><a href="cars.html?runScriptWork=true">Kishaszongépjárművek</a></h3>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer pt-3">
+                  <h6 class="ps-3 mb-0">8 000 Ft-tól</h6></a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 33px;" id="relationship"></div>
+
+
+      <div class="card-body position-relative zindex-2 py-5">
+        <form class="mx-auto" style="max-width: 800px;">
+          <h2 class="h1 card-title text-center pb-4">Vegye fel velünk a kapcsolatot</h2>
+          <p class="fs-lg pb-4 mb-0 mb-sm-2">Bármilyen kérdése merült fel keressen minket bizalommal!</p>
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <label class="form-label fs-base" for="name">Név</label>
+              <input class="form-control form-control-lg" type="text" placeholder="név" required="" id="name">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label fs-base" for="company">Telefonszám</label>
+              <input class="form-control form-control-lg" type="text" placeholder="telefonszám" id="company">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label fs-base" for="email">Email</label>
+              <input class="form-control form-control-lg" type="email" placeholder="Email" required="" id="email">
+            </div>
+
+            <div class="col-sm-12">
+              <label class="form-label fs-base" for="message">Üzenet</label>
+              <textarea class="form-control form-control-lg" rows="6" placeholder="Ide írja az ünetet..." required=""
+                id="message"></textarea>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="agree">
+                <label class="form-check-label" for="agree">Elfogadom a <a
+                    class="nav-link d-inline fs-normal text-decoration-underline p-0" href="#">adatkezelési
+                    tájékoztatóban</a> foglaltakat</label>
+              </div>
+            </div>
+            <div class="col-sm-12 pt-2">
+              <button class="btn btn-lg btn-primary" type="submit">Üzenet küldése</button>
+            </div>
+
+          </div>
+      </div>
+      </form>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- relationship-->
+  <section class="bg-secondary " id="relationshipSection">
+    <div class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <h2 class="h4 mb-4">Nyitvatartás</h2>
+          <p>Hétfő - Péntek</p>
+          <p>09:00 - 17:00</p>
+          <p>Szombat</p>
+          <p>09:00 - 20:00</p>
+          <p>Vasárnap</p>
+          <p>Zárva</p>
+        </div>
+
+        <div class="col">
+          <h2 class="h4 mb-4">Elérhetőségeink</h2>
+          <p><i class="ai-phone lead text-primary me-2"></i><a style="display: inline;"
+              class="nav-link fw-normal p-0 mt-n1" href="tel:+178632256040">+1 (786) 322 560 40</a></p>
+          <p><i class="ai-mail lead text-primary me-2"></i><a style="display: inline;"
+              class="nav-link fw-normal p-0 mt-n1" href="mailto:example@example.com">autoberles@gmail.com</a></p>
+          <p><i class="ai-map-pin lead text-primary me-2"></i><a style="display: inline;"
+              class="nav-link fw-normal p-0 mt-n1" href="#">4432 Nyíregyháza, Nyíregyháza utca 1</a></p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  </main>
+
+
+  <!-- Footer-->
+  <footer class="footer bg-secondary py-5">
+    <div class="container pt-1 pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5">
+      <div class="border-bottom text-center pb-4"><a class="navbar-brand d-inline-flex text-nav py-0 mb-3 mb-md-4"
+          href="index.html"><span class="text-primary flex-shrink-0 me-2">
+            <img style="width: 30px;" src="assets/img/logo3.png" alt=""></span><span>Autóbérlés</span></a>
+
+        <ul class="nav justify-content-center py-1 pb-sm-2">
+          <li class="nav-item"><a class="nav-link py-2 px-3 mx-1" href="#">Általános szerződési feltételek</a></li>
+          <li class="nav-item"><a class="nav-link py-2 px-3 mx-1" href="#">Adatvédelmi szabályzat</a></li>
+        </ul>
+      </div>
+      <div class="d-sm-flex align-items-center justify-content-between pt-4 mt-2 mt-sm-0">
+        <div class="d-flex justify-content-center order-sm-2 mb-4 mb-sm-0"><a
+            class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+              class="ai-instagram"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3"
+            href="#"><i class="ai-facebook"></i></a><a
+            class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle" href="#"><i class="ai-youtube"></i></a>
+        </div>
+        <p class="fs-sm order-sm-1 text-center mb-0"><span class="opacity-70">&copy; All rights reserved. Made by
+          </span><a class="nav-link d-inline fw-normal p-0" href="https://createx.studio/" target="_blank"
+            rel="noopener">Createx Studio</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll="">
+    <svg viewbox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10">
+      </circle>
+    </svg><i class="ai-arrow-up"></i></a>
+  <!-- Vendor scripts: js libraries and plugins-->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+  <script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+  <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+  <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+  <script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="assets/vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="assets/vendor/aos/dist/aos.js"></script>
+  <script src="assets/vendor/leaflet/dist/leaflet.js"></script>
+  <!-- Main theme script-->
+  <script src="assets/js/theme.min.js"></script>
+
+  <!-- Customizer-->
+  <script>!function () { function e(e) { return localStorage.getItem(e) } function r(e, r) { localStorage.setItem(e, r) } var t = document.getElementById("customizer-styles"), n = document.getElementById("custom-generated-styles"), o = `\n    :root {\n      ${e("theme-primary") && `--ar-primary: ${e("theme-primary")};`}\n      ${e("theme-primary-rgb") && `--ar-primary-rgb: ${e("theme-primary-rgb")};`}\n      ${e("theme-warning") && `--ar-warning-rgb: ${e("theme-warning")};`}\n      ${e("theme-warning-rgb") && `--ar-warning-rgb: ${e("theme-warning-rgb")};`}\n      ${e("theme-info") && `--ar-info-rgb: ${e("theme-info")};`}\n      ${e("theme-info-rgb") && `--ar-info-rgb: ${e("theme-info-rgb")};`}\n      ${e("theme-success") && `--ar-success-rgb: ${e("success-info")};`}\n      ${e("theme-success-rgb") && `--ar-success-rgb: ${e("success-info-rgb")};`}\n      ${e("theme-danger") && `--ar-danger-rgb: ${e("danger-info")};`}\n      ${e("theme-danger-rgb") && `--ar-danger-rgb: ${e("danger-info-rgb")};`}\n      ${e("theme-font-family") && `--ar-body-font-family: ${e("theme-font-family")};`}\n      ${e("theme-root-font-size") && `--ar-root-font-size: ${e("theme-root-font-size")};`}\n      ${e("theme-body-font-size") && `--ar-body-font-size: ${e("theme-body-font-size")};`}\n      ${e("theme-border-width") && `--ar-border-width: ${e("theme-border-width")};`}\n      ${e("theme-border-radius") && `--ar-border-radius: ${e("theme-border-radius")};`}\n      ${e("theme-border-radius-sm") && `--ar-border-radius-sm: ${e("theme-border-radius-sm")};`}\n      ${e("theme-border-radius-lg") && `--ar-border-radius-lg: ${e("theme-border-radius-lg")};`}\n      ${e("theme-border-radius-xl") && `--ar-border-radius-xl: ${e("theme-border-radius-xl")};`}\n      ${e("theme-border-radius-2xl") && `--ar-border-radius-2xl: ${e("theme-border-radius-2xl")};`}\n      ${e("theme-primary") && `--ar-link-color: ${e("theme-primary")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color") && `--ar-link-hover-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n    }\n    .btn-primary {\n      ${e("theme-primary") && `--ar-btn-bg: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color") && `--ar-btn-hover-bg: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color") && `--ar-btn-hover-border-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color") && `--ar-btn-active-bg: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color") && `--ar-btn-active-border-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary") && `--ar-btn-disabled-bg: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-disabled-border-color: ${e("theme-primary")};`}\n    }\n    .btn-warning {\n      ${e("theme-warning") && `--ar-btn-bg: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color") && `--ar-btn-hover-bg: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color") && `--ar-btn-hover-border-color: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color") && `--ar-btn-active-bg: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color") && `--ar-btn-active-border-color: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning") && `--ar-btn-disabled-bg: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-disabled-border-color: ${e("theme-warning")};`}\n    }\n    .btn-info {\n      ${e("theme-info") && `--ar-btn-bg: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-border-color: ${e("theme-info")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color") && `--ar-btn-hover-bg: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color") && `--ar-btn-hover-border-color: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color") && `--ar-btn-active-bg: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color") && `--ar-btn-active-border-color: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info") && `--ar-btn-disabled-bg: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-disabled-border-color: ${e("theme-info")};`}\n    }\n    .btn-success {\n      ${e("theme-success") && `--ar-btn-bg: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-border-color: ${e("theme-success")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color") && `--ar-btn-hover-bg: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color") && `--ar-btn-hover-border-color: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color") && `--ar-btn-active-bg: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color") && `--ar-btn-active-border-color: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success") && `--ar-btn-disabled-bg: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-disabled-border-color: ${e("theme-success")};`}\n    }\n    .btn-danger {\n      ${e("theme-danger") && `--ar-btn-bg: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color") && `--ar-btn-hover-bg: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color") && `--ar-btn-hover-border-color: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color") && `--ar-btn-active-bg: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color") && `--ar-btn-active-border-color: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger") && `--ar-btn-disabled-bg: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-disabled-border-color: ${e("theme-danger")};`}\n    }\n    .btn-outline-primary {\n      ${e("theme-primary") && `--ar-btn-color: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-hover-bg: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-hover-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-active-bg: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-active-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-disabled-color: ${e("theme-primary")};`}\n      ${e("theme-primary") && `--ar-btn-disabled-border-color: ${e("theme-primary")};`}\n    }\n    .btn-outline-warning {\n      ${e("theme-warning") && `--ar-btn-color: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-hover-bg: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-hover-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-active-bg: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-active-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-disabled-color: ${e("theme-warning")};`}\n      ${e("theme-warning") && `--ar-btn-disabled-border-color: ${e("theme-warning")};`}\n    }\n    .btn-outline-info {\n      ${e("theme-info") && `--ar-btn-color: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-border-color: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-hover-bg: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-hover-border-color: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-active-bg: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-active-border-color: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-disabled-color: ${e("theme-info")};`}\n      ${e("theme-info") && `--ar-btn-disabled-border-color: ${e("theme-info")};`}\n    }\n    .btn-outline-success {\n      ${e("theme-success") && `--ar-btn-color: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-border-color: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-hover-bg: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-hover-border-color: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-active-bg: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-active-border-color: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-disabled-color: ${e("theme-success")};`}\n      ${e("theme-success") && `--ar-btn-disabled-border-color: ${e("theme-success")};`}\n    }\n    .btn-outline-danger {\n      ${e("theme-danger") && `--ar-btn-color: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-hover-bg: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-hover-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-active-bg: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-active-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-disabled-color: ${e("theme-danger")};`}\n      ${e("theme-danger") && `--ar-btn-disabled-border-color: ${e("theme-danger")};`}\n    }\n  `, a = o; a = o.replace(/null|\s*(?![A-Z])/g, ""); t.append(a), a.split("}").map(function (e) { -1 !== e.indexOf("{--") && n.append(e + "}") }); var i = { root: t.sheet.cssRules[0], primaryBtn: t.sheet.cssRules[1], warningBtn: t.sheet.cssRules[2], infoBtn: t.sheet.cssRules[3], successBtn: t.sheet.cssRules[4], dangerBtn: t.sheet.cssRules[5], primaryOutlineBtn: t.sheet.cssRules[6], warningOutlineBtn: t.sheet.cssRules[7], infoOutlineBtn: t.sheet.cssRules[8], successOutlineBtn: t.sheet.cssRules[9], dangerOutlineBtn: t.sheet.cssRules[10] }; function b() { n.innerHTML = i.root.cssText.replace(/null|\s*(?![A-Z])/g, ""), n.innerHTML += -1 === i.primaryBtn.cssText.indexOf("{ }") ? i.primaryBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.warningBtn.cssText.indexOf("{ }") ? i.warningBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.infoBtn.cssText.indexOf("{ }") ? i.infoBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.successBtn.cssText.indexOf("{ }") ? i.successBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.dangerBtn.cssText.indexOf("{ }") ? i.dangerBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.primaryOutlineBtn.cssText.indexOf("{ }") ? i.primaryOutlineBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.warningOutlineBtn.cssText.indexOf("{ }") ? i.warningOutlineBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.infoOutlineBtn.cssText.indexOf("{ }") ? i.infoOutlineBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.successOutlineBtn.cssText.indexOf("{ }") ? i.successOutlineBtn.cssText.replace(/ /g, "") : "", n.innerHTML += -1 === i.dangerOutlineBtn.cssText.indexOf("{ }") ? i.dangerOutlineBtn.cssText.replace(/ /g, "") : "" } function s(e) { var r = 0, t = 0, n = 0; return 4 == e.length ? (r = "0x" + e[1] + e[1], t = "0x" + e[2] + e[2], n = "0x" + e[3] + e[3]) : 7 == e.length && (r = "0x" + e[1] + e[2], t = "0x" + e[3] + e[4], n = "0x" + e[5] + e[6]), +r + "," + +t + "," + +n } function c(e, r) { var t = parseInt(e.replace("#", ""), 16), n = Math.round(2.55 * r), o = (t >> 16) + n, a = (t >> 8 & 255) + n, i = (255 & t) + n; return "#" + (16777216 + 65536 * (o < 255 ? o < 1 ? 0 : o : 255) + 256 * (a < 255 ? a < 1 ? 0 : a : 255) + (i < 255 ? i < 1 ? 0 : i : 255)).toString(16).slice(1) } for (var l = document.querySelectorAll("#theme-colors .color-swatch"), d = 0; d < l.length; d++) { var m = l[d].querySelector("label"), h = l[d].querySelector('input[type="color"]'); colorInput = l[d].querySelector('input[type="text"]'), colorInput.value = e(l[d].id) || colorInput.value, h.value = e(l[d].id) || h.value, m.style.backgroundColor = e(l[d].id) || h.value, h.addEventListener("input", function (e) { var n = e.target.parentElement.querySelector("label"), o = e.target.parentElement.querySelector('input[type="text"]'), a = e.target.value; t.sheet.cssRules[d + 1]; r("theme-" + e.target.id, a), r("theme-" + e.target.id + "-rgb", s(a)), r("theme-" + e.target.id + "-btn-hover-active-border-bg-color", c(a, -10)), n.style.backgroundColor = a, o.value = a, i.root.style.setProperty("--ar-" + e.target.id, a), i.root.style.setProperty("--ar-" + e.target.id + "-rgb", s(a)), i[e.target.id + "Btn"].style.setProperty("--ar-btn-bg", a), i[e.target.id + "Btn"].style.setProperty("--ar-btn-border-color", a), i[e.target.id + "Btn"].style.setProperty("--ar-btn-hover-bg", c(a, -10)), i[e.target.id + "Btn"].style.setProperty("--ar-btn-hover-border-color", c(a, -10)), i[e.target.id + "Btn"].style.setProperty("--ar-btn-active-bg", c(a, -10)), i[e.target.id + "Btn"].style.setProperty("--ar-btn-active-border-color", c(a, -10)), i[e.target.id + "Btn"].style.setProperty("--ar-btn-disabled-bg", a), i[e.target.id + "Btn"].style.setProperty("--ar-btn-disabled-border-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-border-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-hover-bg", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-hover-border-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-active-bg", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-active-border-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-disabled-color", a), i[e.target.id + "OutlineBtn"].style.setProperty("--ar-btn-disabled-border-color", a), "primary" === e.target.id && (r("theme-link-hover-color", c(a, -10)), i.root.style.setProperty("--ar-link-color", a), i.root.style.setProperty("--ar-link-hover-color", c(a, -10))), b() }), colorInput.addEventListener("change", function (e) { var t = e.target.parentElement.querySelector("label"), n = e.target.parentElement.querySelector('input[type="color"]'), o = e.target.value; 0 != o.length && o.startsWith("#") && (r("theme-" + n.id, o), r("theme-" + n.id + "-rgb", s(o)), r("theme-" + n.id + "-btn-hover-active-border-bg-color", c(o, -10)), t.style.backgroundColor = o, n.value = o, i.root.style.setProperty("--ar-" + n.id, o), i.root.style.setProperty("--ar-" + n.id + "-rgb", s(o)), i[n.id + "Btn"].style.setProperty("--ar-btn-bg", o), i[n.id + "Btn"].style.setProperty("--ar-btn-border-color", o), i[n.id + "Btn"].style.setProperty("--ar-btn-hover-bg", c(o, -10)), i[n.id + "Btn"].style.setProperty("--ar-btn-hover-border-color", c(o, -10)), i[n.id + "Btn"].style.setProperty("--ar-btn-active-bg", c(o, -10)), i[n.id + "Btn"].style.setProperty("--ar-btn-active-border-color", c(o, -10)), i[n.id + "Btn"].style.setProperty("--ar-btn-disabled-bg", o), i[n.id + "Btn"].style.setProperty("--ar-btn-disabled-border-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-border-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-hover-bg", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-hover-border-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-active-bg", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-active-border-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-disabled-color", o), i[n.id + "OutlineBtn"].style.setProperty("--ar-btn-disabled-border-color", o), "primary" === n.id && (r("theme-link-hover-color", c(o, -10)), i.root.style.setProperty("--ar-link-color", o), i.root.style.setProperty("--ar-link-hover-color", c(o, -10))), b()) }) } var g = document.getElementById("font-url"), u = document.getElementById("google-font"); u.href = e("theme-font-url") || g.value, g.value = e("theme-font-url") || g.value, g.addEventListener("blur", function (e) { var t = e.target.value; r("theme-font-url", t), u.href = t }); var v = document.getElementById("body-font-family"); v.value = e("theme-font-family") || v.value, v.addEventListener("blur", function (e) { var t = e.target.value; r("theme-font-family", t), i.root.style.setProperty("--ar-body-font-family", t), b() }); var $ = document.getElementById("root-font-size"); $.value = e("theme-root-font-size") || $.value, $.addEventListener("change", function (e) { var t = e.target.value; r("theme-root-font-size", t), i.root.style.setProperty("--ar-root-font-size", t), b() }); var y = document.getElementById("body-font-size"); y.value = e("theme-body-font-size") || y.value, y.addEventListener("change", function (e) { var t = e.target.value; r("theme-body-font-size", t), i.root.style.setProperty("--ar-body-font-size", t), b() }); var p = document.getElementById("border-width"); p.value = parseInt(e("theme-border-width")) || p.value, p.addEventListener("input", function (e) { var t = e.target.value; r("theme-border-width", t + "px"), i.root.style.setProperty("--ar-border-width", t + "px"), b() }); var f = document.getElementById("border-radius"); f.value = parseFloat(e("theme-border-radius")) || f.value, f.addEventListener("input", function (e) { var t = e.target.value; r("theme-border-radius", t + "rem"), i.root.style.setProperty("--ar-border-radius", t + "rem"), b() }); var B = document.querySelectorAll('#theme-border-radiuses input[type="number"'); for (d = 0; d < B.length; d++)B[d].value = e("theme-" + B[d].id + "multiplier") || B[d].value, B[d].addEventListener("input", function (e) { var t = e.target.value; r("theme-" + e.target.id, "calc(var(--ar-border-radius) * " + t + ")"), r("theme-" + e.target.id + "multiplier", t), i.root.style.setProperty("--ar-" + e.target.id, "calc(var(--ar-border-radius) * " + t + ")"), b() }); var w = document.getElementById("customizer"), x = document.getElementById("customizer-btns"); e("theme-customizer-btns") && x.classList.remove("d-none"), w.addEventListener("change", function (e) { r("theme-customizer-btns", !0), x.classList.remove("d-none") }), document.getElementById("customizer-reset-btn").addEventListener("click", function () { for (var e = [], r = 0; r < localStorage.length; r++)"theme" == localStorage.key(r).substring(0, 5) && e.push(localStorage.key(r)); for (r = 0; r < e.length; r++)localStorage.removeItem(e[r]); window.location.reload() }); var P = document.getElementById("copy-styles-btn"); P.addEventListener("click", function () { var e = document.createRange(); e.selectNode(n), window.getSelection().removeAllRanges(), window.getSelection().addRange(e), navigator.clipboard.writeText(n.innerHTML), this.innerHTML = '<i class="ai-check me-2 ms-n1"></i>Copied!', setTimeout(function () { P.innerHTML = '<i class="ai-copy me-2 ms-n1"></i>Copy styles' }, 2e3) }) }();</script>
+</body>
+
+</html>
